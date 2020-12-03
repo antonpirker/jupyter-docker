@@ -2,8 +2,10 @@ FROM python:3
 
 WORKDIR /jup
 
-RUN pip install jupyter -U && pip install jupyterlab
+RUN mkdir -p /root/.jupyter && pip install jupyter -U && pip install jupyterlab -U
 
-EXPOSE 8888
+COPY jupyter_notebook_config.py /root/.jupyter/jupyter_notebook_config.py
 
-ENTRYPOINT ["jupyter", "lab","--ip=0.0.0.0","--allow-root"]
+EXPOSE 8000
+
+CMD ["jupyter", "lab","--ip=0.0.0.0","--allow-root"]
