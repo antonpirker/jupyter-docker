@@ -1,5 +1,9 @@
 
-Trying to run Jupyter in a docker container.
+# Jupyter Notebook on WunderPreview
 
+This runs a Jupyter Notebook in a Docker container.
 
-This is basically just for testing something else.
+The Notebook is password protected.
+
+The password is: `wunderpreview`.
+
